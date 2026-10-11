@@ -1,19 +1,53 @@
-# 💬 Chatbot template
+# 📘 社内規程AIナビ
 
-A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
+社員の「ちょっと聞きたい」をAIで解決するチャットボット
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chatbot-template.streamlit.app/)
+## 開発の目的
 
-### How to run it on your own machine
+就業規則や旅費規程、慶弔規程などは、社員が必要な情報を探すのに時間がかかることがあります。そこで、自然な日本語で質問すると、社内規程を参照して回答するアプリを開発しました。
 
-1. Install the requirements
+## 主な機能
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+- 日本語で社内規程について質問できる
+- 登録された規程に基づいて回答する
+- 回答の根拠となる条文番号を示す
+- 規程に記載がない質問には、担当部署への確認を案内する
+- 質問例を選択できる
+- デモ用の規程を画面で確認できる
 
-2. Run the app
+## オリジナリティ・工夫した点
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+1. 回答とともに根拠条文を表示し、確認しやすくしたこと
+2. 規程に記載のない内容をAIが推測しないよう指示したこと
+3. 専門知識がなくても利用できる日本語の画面と質問例を用意したこと
+
+## 開発環境
+
+- Python
+- Streamlit Community Cloud
+- OpenAI API（gpt-4o-mini）
+- GitHub
+
+## 使い方
+
+1. アプリを開く
+2. OpenAI APIキーを入力する
+3. 質問例を選ぶか、質問を入力する
+4. 「AIに質問する」を押す
+5. 回答と根拠条文を確認する
+
+## 動作確認例
+
+質問：結婚したら何日休めますか？
+
+回答：特別休暇として5日間取得できます。事前に上長への申請が必要です。
+
+根拠：第2条（結婚休暇）
+
+## 今後の展望
+
+今回は情報管理の観点から架空の社内規程を使用しています。将来的には、安全な社内限定環境で実際のPDF・Word形式の規程を参照できるようにし、人事総務部門への問い合わせ削減と社員の利便性向上につなげたいと考えています。
+
+## 注意事項
+
+本アプリは講義用の試作品です。掲載している規程はすべて架空であり、実際の会社のルールではありません。AIの回答は正確性を保証するものではありません。APIキーは公開しないでください。
